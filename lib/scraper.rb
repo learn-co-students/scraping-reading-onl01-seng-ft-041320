@@ -1,4 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-html = open("https://flatironschool.com/")
+require 'pry'
+
+doc = Nokogiri::HTML(open("https://flatironschool.com/"))
+puts doc.css(".headline-26OIBN").text
